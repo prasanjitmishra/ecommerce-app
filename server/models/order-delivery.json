@@ -1,0 +1,41 @@
+{
+  "name": "order_delivery",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "person_name": {
+      "type": "string",
+      "required": true
+    },
+    "time": {
+      "type": "number",
+      "required": true
+    },
+    "delivery_type": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "boolean",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "order": {
+      "type": "belongsTo",
+      "model": "order",
+      "foreignKey": ""
+    },
+    "deliveryCompany": {
+      "type": "belongsTo",
+      "model": "delivery_company",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

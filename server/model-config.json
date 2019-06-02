@@ -1,0 +1,94 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "sku": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "seller": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "seller_sku": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "inventory": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "stock": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "coupon": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "order": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "line_item": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "order_payment": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "order_delivery": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "order_refund": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "delivery_company": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "user_bank_details": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "user_address": {
+    "dataSource": "mongo",
+    "public": true
+  }
+}

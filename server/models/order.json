@@ -1,0 +1,57 @@
+{
+  "name": "order",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "customer_email": {
+      "type": "string",
+      "required": true
+    },
+    "coupon_applied": {
+      "type": "string"
+    },
+    "order_discount": {
+      "type": "number"
+    },
+    "deliver_charge": {
+      "type": "number"
+    },
+    "order_total": {
+      "type": "number",
+      "required": true
+    },
+    "tax": {
+      "type": "number",
+      "required": true
+    },
+    "invoice_number": {
+      "type": "string",
+      "required": true
+    },
+    "delivery_status": {
+      "type": "string",
+      "required": true
+    },
+    "cancellation_status": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "lineItems": {
+      "type": "hasMany",
+      "model": "line_item",
+      "foreignKey": ""
+    },
+    "userAddress": {
+      "type": "belongsTo",
+      "model": "user_address",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,37 @@
+{
+  "name": "order_refund",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "refund_amount": {
+      "type": "number",
+      "required": true
+    },
+    "refund_status": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "refund_mode": {
+      "type": "string",
+      "required": true
+    },
+    "transaction_number": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "order": {
+      "type": "belongsTo",
+      "model": "order",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

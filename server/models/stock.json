@@ -1,0 +1,29 @@
+{
+  "name": "stock",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "quantity": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "sellerSku": {
+      "type": "belongsTo",
+      "model": "seller_sku",
+      "foreignKey": ""
+    },
+    "inventory": {
+      "type": "belongsTo",
+      "model": "inventory",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,36 @@
+{
+  "name": "order_payment",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "paid_amount": {
+      "type": "number",
+      "required": true
+    },
+    "pending_amount": {
+      "type": "number",
+      "required": true
+    },
+    "transaction_number": {
+      "type": "string",
+      "required": true
+    },
+    "payment_mode": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "order": {
+      "type": "belongsTo",
+      "model": "order",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

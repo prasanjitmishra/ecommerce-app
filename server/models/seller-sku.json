@@ -1,0 +1,35 @@
+{
+  "name": "seller_sku",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "unit_price": {
+      "type": "number",
+      "required": true
+    },
+    "total_stock": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "sku": {
+      "type": "belongsTo",
+      "model": "sku",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

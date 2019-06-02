@@ -1,0 +1,30 @@
+{
+  "name": "coupon",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "code": {
+      "type": "string",
+      "required": true
+    },
+    "discount": {
+      "type": "number",
+      "required": true
+    },
+    "discount_type": {
+      "type": "string",
+      "required": true
+    },
+    "maximum_discount": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

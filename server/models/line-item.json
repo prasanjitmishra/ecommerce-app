@@ -1,0 +1,57 @@
+{
+  "name": "line_item",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "quantity": {
+      "type": "number",
+      "required": true
+    },
+    "unit_price": {
+      "type": "number",
+      "required": true
+    },
+    "unit_discount": {
+      "type": "number",
+      "required": true
+    },
+    "unit_deliver_charge": {
+      "type": "number",
+      "required": true
+    },
+    "tax": {
+      "type": "number",
+      "required": true
+    },
+    "item_total": {
+      "type": "number",
+      "required": true
+    },
+    "delivery_status": {
+      "type": "boolean",
+      "required": true
+    },
+    "cancellation_status": {
+      "type": "boolean",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "order": {
+      "type": "belongsTo",
+      "model": "order",
+      "foreignKey": ""
+    },
+    "sellerSku": {
+      "type": "belongsTo",
+      "model": "seller_sku",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
